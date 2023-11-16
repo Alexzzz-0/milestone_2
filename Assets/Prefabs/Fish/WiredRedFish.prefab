@@ -56,6 +56,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.0136
       objectReference: {fileID: 0}
+    - target: {fileID: -369793900643829979, guid: c87a8454f5a76db4b9eb3a9e764e76ae, type: 3}
+      propertyPath: m_TagString
+      value: Wired
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c87a8454f5a76db4b9eb3a9e764e76ae, type: 3}
       propertyPath: m_Name
       value: WiredRedFish
@@ -387,7 +391,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3

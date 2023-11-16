@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -189,6 +190,12 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            int sceneIndex = SceneManager.GetActiveScene().buildIndex;
+            SceneManager.LoadScene(sceneIndex);
+        }
+        
         if (isDie)
         {
             return;
@@ -581,6 +588,8 @@ public class Player : MonoBehaviour
     public int redCounter = 0;
     public int blackCounter = 0;
     public int pinkCounter = 0;
+    public int wiredCounter = 0;
+    private int flameCounter;
     public void JudgeFish(FishBase fish)
     {
         if (fish is RedFish)
@@ -600,5 +609,16 @@ public class Player : MonoBehaviour
             GameController.Instance.tipState.SetState("Black" + blackCounter);
             blackCounter++;
         }
+    }
+
+    public void WiredFish()
+    {
+        GameController.Instance.tipState.SetState("Wired"+wiredCounter);
+        wiredCounter++;
+    }
+
+    public void Flame()
+    {
+        GameController.Instance.tipState.SetState("Flame"+flameCounter);
     }
 }

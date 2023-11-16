@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Ball
   - Ground
+  - Wired
+  - Flame
   layers:
   - Default
   - TransparentFX

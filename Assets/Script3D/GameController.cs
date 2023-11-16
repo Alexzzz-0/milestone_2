@@ -57,7 +57,7 @@ public class GameController : MonoBehaviour
     public Camera uiCamera;
     public Transform mouseMove;
     public Transform ballMoveParent;
-    //压力表
+    //脩鹿脕娄卤铆
     public PressurePercent pressurePercent;
     bool isOver = false;
     public void GameOver()
@@ -88,7 +88,7 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //默认不显示鼠标 鼠标用其他体现
+        //脛卢脠脧虏禄脧脭脢戮脢贸卤锚 脢贸卤锚脫脙脝盲脣没脤氓脧脰
         ShowMouseLayer = 0;
      //   MouseRefeshPos();
     }
@@ -128,7 +128,7 @@ public class GameController : MonoBehaviour
 
     void MouseRefeshPos()
     {
-        //手指在鼠标位置
+        //脢脰脰赂脭脷脢贸卤锚脦禄脰脙
         Vector3 touchPos = Input.mousePosition;
         //Vector3 worldPos= gameCamera.ScreenToWorldPoint(touchPos);
         Vector3 uiPos = uiCamera.ScreenToWorldPoint(touchPos);
@@ -212,7 +212,7 @@ public class GameController : MonoBehaviour
          
         }
 
-        //每过10s创建红鱼
+        //脙驴鹿媒10s麓麓陆篓潞矛脫茫
         /*
         createRedFishTimer += Time.deltaTime;
         if (createRedFishTimer> createRedFishInterval)
@@ -224,7 +224,7 @@ public class GameController : MonoBehaviour
             blackFish.transform.SetParent(fishParent);
         }
         */
-        //当玩家按下
+        //碌卤脥忙录脪掳麓脧脗
 
         //  MouseRefeshPos();
         if (isOver)
@@ -246,8 +246,8 @@ public class GameController : MonoBehaviour
     }
 
 
-    //鱼群的控制
-    //黑鱼速度
+    //脫茫脠潞碌脛驴脴脰脝
+    //潞脷脫茫脣脵露脠
     public float BlackSpeedPower_OnceInPink = 0.9f;
 
     public float BlackMoveSpeedPower
@@ -260,12 +260,12 @@ public class GameController : MonoBehaviour
             {
                 speedPower *= BlackSpeedPower_OnceInPink;
             }
-           // Debug.Log("黑鱼速度倍率"+speedPower);
+           // Debug.Log("潞脷脫茫脣脵露脠卤露脗脢"+speedPower);
             return speedPower;
         }
 
     }
-    //红鱼速度
+    //潞矛脫茫脣脵露脠
     public float RedSpeedPower_OnceInRed= 0.9f;
     public float RedMoveSpeedPower
     {
@@ -277,10 +277,12 @@ public class GameController : MonoBehaviour
             {
                 speedPower *= BlackSpeedPower_OnceInPink;
             }
-            //Debug.Log("红鱼速度倍率" + speedPower);
+            //Debug.Log("潞矛脫茫脣脵露脠卤露脗脢" + speedPower);
             return speedPower;
         }
 
     }
+
+    public GameObject flame;
 
 }

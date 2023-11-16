@@ -53,6 +53,16 @@ public class WaveBullet : MonoBehaviour
             Destroy(this.gameObject, 0.25f);
             player.JudgeFish(other.GetComponent<FishBase>());
         }
+
+        if (other.CompareTag("Wired"))
+        {
+            player.WiredFish();
+        }
+
+        if (other.CompareTag("Flame"))
+        {
+            player.Flame();
+        }
     }
     float GetForce
     {

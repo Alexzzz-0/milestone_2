@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
 public class PinkFish : FishBase
 {
    RedFish targetRedFish;
     public bool isBig = false;
-
+    private float timer; 
+    
     public override void LoseScale()
     {
         base.LoseScale();
@@ -121,37 +123,79 @@ public class PinkFish : FishBase
     int addScaleCounter = 0;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.transform.GetComponent<HaiCaoSC>())
+        if (timer >= 40f)
         {
-
-            //生成三个体型最小的红鱼
-            foreach (var item in createRedPoses)
+            if (other.transform.GetComponent<HaiCaoSC>())
             {
-                GameController.Instance.CreateRedFish(item.transform.position, item.transform.rotation,(RedFish redfish)=> { });
-                /*
-               var fish= Instantiate(createFishPre);
-                fish.transform.SetParent(GameController.Instance.fishParent);
-                fish.transform.position = item.transform.position;
-                fish.transform.rotation = item.transform.rotation;
-                */
 
-            }
-
-            DeleteThis();
+                //生成三个体型最小的红鱼
+                // foreach (var item in createRedPoses)
+                // {
+                //     GameController.Instance.CreateRedFish(item.transform.position, item.transform.rotation,(RedFish redfish)=> { });
+                //     /*
+                //    var fish= Instantiate(createFishPre);
+                //     fish.transform.SetParent(GameController.Instance.fishParent);
+                //     fish.transform.position = item.transform.position;
+                //     fish.transform.rotation = item.transform.rotation;
+                //     */
+                //
+                // }
+                //
+                // DeleteThis();
+                CreateRedFishAni();
+                Invoke("CreateRedFish",10f);
          
-        }
-        if (other.transform.GetComponent<RedFish>())
-        {
-            other.transform.GetComponent<RedFish>().DeleteThis();
-            addScaleCounter++;
-            if (addScaleCounter>addScaleCount)
-            {
-                addScaleCounter = 0;
-                AddScale();
             }
+            if (other.transform.GetComponent<RedFish>())
+            {
+                other.transform.GetComponent<RedFish>().DeleteThis();
+                addScaleCounter++;
+                if (addScaleCounter>addScaleCount)
+                {
+                    addScaleCounter = 0;
+                    AddScale();
+                }
        
+            }
         }
+        
     }
+
+    [SerializeField] private Transform flameSpawnPos;
+    private bool spwanRedAni = false;
+    void CreateRedFishAni()
+    {
+        if (!spwanRedAni)
+        {
+            GameObject newFX = Instantiate(GameController.Instance.flame);
+            newFX.transform.position = flameSpawnPos.position;
+            newFX.transform.localScale = Vector3.one * 0.1f;
+            newFX.transform.DOScale(Vector3.zero, 10f);
+            newFX.transform.rotation = Quaternion.Euler(new Vector3(0,90f,0));
+            Destroy(newFX,10f);
+
+            spwanRedAni = true;
+        }
+        
+    }
+    
+    private void CreateRedFish()
+    {
+        foreach (var item in createRedPoses)
+        {
+            GameController.Instance.CreateRedFish(item.transform.position, item.transform.rotation,(RedFish redfish)=> { });
+            /*
+           var fish= Instantiate(createFishPre);
+            fish.transform.SetParent(GameController.Instance.fishParent);
+            fish.transform.position = item.transform.position;
+            fish.transform.rotation = item.transform.rotation;
+            */
+
+        }
+
+        DeleteThis();
+    }
+    
     private void OnCollisionEnter(Collision collision)
     {
         /*
@@ -202,6 +246,8 @@ public class PinkFish : FishBase
     // Update is called once per frame
     void Update()
     {
+        timer += Time.deltaTime;
+        
         //判断是最大的鱼
         if (IsMaxPinkFish)
         {
