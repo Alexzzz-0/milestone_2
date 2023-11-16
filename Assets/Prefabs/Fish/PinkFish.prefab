@@ -448,11 +448,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d73cb49211f73e144bc86e68946a7e25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
-  scaleSize: 6
+  moveSpeed: 1.2
+  scaleSize: 4
   scaleCountText: {fileID: 3369439307875896554}
   scaleSizeRange: {x: 4, y: 6}
-  scaleNumRange: {x: 4, y: 6}
+  scaleNumRange: {x: 1, y: 2}
   isBig: 0
   blackFishList: []
   pinkFishState: 0
@@ -642,7 +642,6 @@ GameObject:
   - component: {fileID: 5890399030104726201}
   - component: {fileID: 9195015324317140260}
   - component: {fileID: 7148165490671194178}
-  - component: {fileID: 1339850334263668496}
   - component: {fileID: 3865013431088238521}
   m_Layer: 0
   m_Name: "\u9C7C"
@@ -673,7 +672,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3688210190192866805}
-  m_Mesh: {fileID: 3522027139481013270, guid: ace41c56a82e6174d979f28d17c561c9, type: 3}
+  m_Mesh: {fileID: -389264710808786696, guid: 87794076a9f933a46ae5ea1cc7797202, type: 3}
 --- !u!23 &9195015324317140260
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -738,22 +737,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -389264710808786696, guid: 87794076a9f933a46ae5ea1cc7797202, type: 3}
---- !u!114 &1339850334263668496
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3688210190192866805}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e06342615ef12ed489779e917d952ae2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetMeshFilter: {fileID: 5890399030104726201}
-  forceOffset: 0.1
-  springForce: 10
-  damping: 5
 --- !u!114 &3865013431088238521
 MonoBehaviour:
   m_ObjectHideFlags: 0

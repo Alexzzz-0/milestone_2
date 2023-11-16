@@ -6,8 +6,12 @@ TagManager:
   tags:
   - Ball
   - Ground
+<<<<<<< HEAD
   - Wired
   - Flame
+=======
+  - Weird
+>>>>>>> jayde
   layers:
   - Default
   - TransparentFX

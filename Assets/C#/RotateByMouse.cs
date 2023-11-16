@@ -22,7 +22,11 @@ public class RotateByMouse : MonoBehaviour
     private bool vrotateInteria;
     public float moveSpeed = 0.5f;
     private Rigidbody rig;
+<<<<<<< HEAD
     private float setSpeed;
+=======
+    private float moveSpeeSet;
+>>>>>>> jayde
     void RotateDir(int hdir)
     {
         //计算要旋转到的目标
@@ -169,10 +173,17 @@ public class RotateByMouse : MonoBehaviour
     private void Start()
     {
         rig = GetComponent<Rigidbody>();
+<<<<<<< HEAD
 
         setSpeed = moveSpeed;
     }
+=======
+>>>>>>> jayde
 
+        moveSpeeSet = moveSpeed;
+    }
+    
+    
     void Update()
     {
 
@@ -251,7 +262,11 @@ public class RotateByMouse : MonoBehaviour
         }
         else
         {
+<<<<<<< HEAD
             moveSpeed = setSpeed;}
+=======
+            moveSpeed = moveSpeeSet;}
+>>>>>>> jayde
         
         RotateMouse();
         
