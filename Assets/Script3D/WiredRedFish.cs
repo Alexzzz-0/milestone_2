@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class WiredRedFish : MonoBehaviour
 {
@@ -11,6 +13,7 @@ public class WiredRedFish : MonoBehaviour
     private float timer;
     public float setTime = 3f;
     private bool up = true;
+    private Player player;
     
     private void Start()
     {
@@ -30,7 +33,8 @@ public class WiredRedFish : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         
         //rb.velocity = Vector3.up * force;
-        
+
+        player = GameController.Instance.player;
     }
 
     void Update()
@@ -99,4 +103,13 @@ public class WiredRedFish : MonoBehaviour
         // }
         
     }
+
+    // private void OnTriggerEnter(Collider other)
+    // {
+    //     if (other.CompareTag("Ball"))
+    //     {
+    //         Debug.Log("hit it");
+    //         player.JudgeFish(GetComponent<WiredRedFish>());
+    //     }
+    // }
 }

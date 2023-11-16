@@ -581,8 +581,10 @@ public class Player : MonoBehaviour
     public int redCounter = 0;
     public int blackCounter = 0;
     public int pinkCounter = 0;
+    public int weirdCounter = 0;
     public void JudgeFish(FishBase fish)
     {
+        
         if (fish is RedFish)
         {
             GameController.Instance.tipState.SetState("Red"+ redCounter);
@@ -600,5 +602,17 @@ public class Player : MonoBehaviour
             GameController.Instance.tipState.SetState("Black" + blackCounter);
             blackCounter++;
         }
+
+        // if (fish is WiredRedFish)
+        // {
+        //     GameController.Instance.tipState.SetState("Weird" + weirdCounter);
+        //     weirdCounter++;
+        // }
+    }
+
+    public void WiredFish()
+    {
+        GameController.Instance.tipState.SetState("Weird" + weirdCounter);
+        weirdCounter++;
     }
 }
