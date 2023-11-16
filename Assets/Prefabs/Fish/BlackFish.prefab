@@ -252,7 +252,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1625288850486375520}
-  m_Mesh: {fileID: -389264710808786696, guid: 87794076a9f933a46ae5ea1cc7797202, type: 3}
+  m_Mesh: {fileID: 3522027139481013270, guid: ace41c56a82e6174d979f28d17c561c9, type: 3}
 --- !u!23 &8121895183245050520
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -273,7 +273,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9d7d5a973b5bce545b3d773f2d452918, type: 2}
+  - {fileID: 2100000, guid: f399946d894cdcd488be7f28bf58211c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -598,10 +598,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b10e113b3a9b7c1469cb18c4c46ace22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 1.5
+  moveSpeed: 1.2
   scaleSize: 3
   scaleCountText: {fileID: 1016198703038085031}
-  scaleSizeRange: {x: 1, y: 2}
+  scaleSizeRange: {x: 2, y: 3}
   scaleNumRange: {x: 1, y: 2}
   pinkCreateTF: {fileID: 8704545278596935183}
   createPinkPrefab: {fileID: 361027692642681255, guid: c5e8ec1df3f8e0e46b1ae5646d29e9e3, type: 3}

@@ -1210,7 +1210,7 @@ MonoBehaviour:
   scaleSize: 8
   scaleCountText: {fileID: 929626833631715355}
   scaleSizeRange: {x: 6, y: 8}
-  scaleNumRange: {x: 6, y: 8}
+  scaleNumRange: {x: 1, y: 2}
   isBig: 1
   blackFishList: []
   pinkFishState: 0
@@ -1364,7 +1364,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9009272224647682631}
-  m_Mesh: {fileID: 3522027139481013270, guid: ace41c56a82e6174d979f28d17c561c9, type: 3}
+  m_Mesh: {fileID: -389264710808786696, guid: 87794076a9f933a46ae5ea1cc7797202, type: 3}
 --- !u!23 &7209964867319337806
 MeshRenderer:
   m_ObjectHideFlags: 0
