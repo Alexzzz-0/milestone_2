@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3438349566975695659}
   - component: {fileID: 1448844825244569528}
   m_Layer: 0
-  m_Name: old wave bullet
+  m_Name: OldWaveBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -482,10 +482,11 @@ GameObject:
   - component: {fileID: 8406837614073894565}
   - component: {fileID: 1257705969366507858}
   - component: {fileID: 4326251216228092030}
+  - component: {fileID: 4873976823861709970}
   - component: {fileID: 4639133765713462686}
   m_Layer: 0
   m_Name: BlackFish
-  m_TagString: Untagged
+  m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -559,6 +560,32 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &4873976823861709970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2850318379318481190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca43ad08ddd9a854f8f607fddf13a466, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scaleRange: {x: 0.5, y: 2}
+  isDie: 0
+  dieEffect: {fileID: 0}
+  maxDie: 0.7
+  minDie: 0.3
+  isTouch: 0
+  changePosDistance: 0.1
+  moveSpeed: 1
+  rotatemiddle: {fileID: 0}
+  xingbianTouch: {fileID: 1093419414971771260}
+  xingbianForce_JiYa: 10000
+  jiya_Parent: {fileID: 0}
+  xingbianForce_kuoZhang: 10000
+  kuozhangParent: {fileID: 0}
 --- !u!114 &4639133765713462686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -571,7 +598,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b10e113b3a9b7c1469cb18c4c46ace22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
+  moveSpeed: 1.5
   scaleSize: 3
   scaleCountText: {fileID: 1016198703038085031}
   scaleSizeRange: {x: 1, y: 2}

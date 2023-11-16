@@ -165,7 +165,7 @@ public class Player : MonoBehaviour
     public void AddScale()
     {
         useCounter++;
-        GameController.Instance.AddPinkCount();
+        //GameController.Instance.AddPinkCount();
         if (useCounter>= useCount_Pink)
         {
             useCounter = 0;

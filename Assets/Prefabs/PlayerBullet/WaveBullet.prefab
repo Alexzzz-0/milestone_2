@@ -50,7 +50,7 @@ MonoBehaviour:
   sizeRange: {x: 0.01, y: 1}
   foreRange: {x: 2000, y: 500}
   moveTime: 1
-  AllDistance: 10
+  AllDistance: 15
   forcePowerToFish: 5000
 --- !u!65 &1448844825244569528
 BoxCollider:

@@ -186,6 +186,7 @@ public class GameController : MonoBehaviour
         }
         if (curCount<maxPinkCount)
         {
+            GameController.Instance.AddPinkCount();
             var pinkFish=Instantiate(pinkFish_Pre);
             pinkFish.transform.SetParent(fishParent);
             pinkFish.transform.position = pos;
