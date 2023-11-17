@@ -643,7 +643,6 @@ GameObject:
   - component: {fileID: 9195015324317140260}
   - component: {fileID: 7148165490671194178}
   - component: {fileID: 3865013431088238521}
-  - component: {fileID: 6391257526683179890}
   m_Layer: 0
   m_Name: "\u9C7C"
   m_TagString: Untagged
@@ -766,22 +765,6 @@ MonoBehaviour:
   gradientOffset2: 0
   clampMinMax: {x: 0.1, y: 3}
   randomizationPercent: 30
---- !u!114 &6391257526683179890
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3688210190192866805}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e06342615ef12ed489779e917d952ae2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetMeshFilter: {fileID: 0}
-  forceOffset: 0.1
-  springForce: 20
-  damping: 5
 --- !u!1 &3932991803662498920
 GameObject:
   m_ObjectHideFlags: 0
