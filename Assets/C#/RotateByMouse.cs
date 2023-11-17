@@ -9,10 +9,10 @@ public class RotateByMouse : MonoBehaviour
     public Camera curCamera;
     private float accelerate = 0.5f;
     private float hRotateSpeed = 50f;
-    private Vector2 hRotateSpeedRange = new Vector2(20f, 1000f);
+    private Vector2 hRotateSpeedRange = new Vector2(40f, 1000f);
     private float hPressTime = 0;
     private float vRotateSpeed = 15f;
-    private Vector2 vRotateSpeedRange = new Vector2(15f, 1000f);
+    private Vector2 vRotateSpeedRange = new Vector2(30f, 1000f);
     private float vPressTime = 0;
     private Quaternion targetRotation;
     private float hangle;
@@ -22,6 +22,7 @@ public class RotateByMouse : MonoBehaviour
     private bool vrotateInteria;
     public float moveSpeed = 0.5f;
     private Rigidbody rig;
+    private float moveSpeeSet;
     void RotateDir(int hdir)
     {
         //计算要旋转到的目标
@@ -168,8 +169,11 @@ public class RotateByMouse : MonoBehaviour
     private void Start()
     {
         rig = GetComponent<Rigidbody>();
-    }
 
+        moveSpeeSet = moveSpeed;
+    }
+    
+    
     void Update()
     {
 
@@ -248,7 +252,7 @@ public class RotateByMouse : MonoBehaviour
         }
         else
         {
-            moveSpeed = 2f;}
+            moveSpeed = moveSpeeSet;}
         
         RotateMouse();
         

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -53,7 +54,30 @@ public class WaveBullet : MonoBehaviour
             Destroy(this.gameObject, 0.25f);
             player.JudgeFish(other.GetComponent<FishBase>());
         }
+
+        if (other.CompareTag("Weird"))
+        {
+            Debug.Log("weird");
+            player.WiredFish();
+        }
     }
+
+    // private void OnCollisionEnter(Collision other)
+    // {
+    //     if (other.gameObject.GetComponent<FishBase>())
+    //     {
+    //         Debug.Log("hit it");
+    //         //isDie = true;
+    //         //Destroy(this.gameObject, 0.25f);
+    //         player.JudgeFish(other.gameObject.GetComponent<FishBase>());
+    //     }
+    //
+    //     if (other.gameObject.CompareTag("Ball"))
+    //     {
+    //         Debug.Log("hit it");
+    //     }
+    // }
+
     float GetForce
     {
         get
