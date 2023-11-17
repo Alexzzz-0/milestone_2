@@ -448,18 +448,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d73cb49211f73e144bc86e68946a7e25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 1.2
+  moveSpeed: 1.5
   scaleSize: 4
   scaleCountText: {fileID: 3369439307875896554}
   scaleSizeRange: {x: 4, y: 6}
-  scaleNumRange: {x: 1, y: 2}
+  scaleNumRange: {x: 4, y: 6}
   isBig: 0
   blackFishList: []
   pinkFishState: 0
   createRedPoses:
   - {fileID: 7447317061985064266}
+  - {fileID: 7447317061985064266}
   createFishPre: {fileID: 8588265326221012255, guid: 04a2b1f3bdfe6f642b47227fa74d1e85, type: 3}
-  addScaleCount: 1
+  addScaleCount: 2
   DownScaleTime_NoEatFish: 10
   redFishRange: {x: 10, y: 20}
   blackFishPoses:

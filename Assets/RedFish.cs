@@ -62,7 +62,7 @@ public class RedFish : FishBase
     public float findBlackRange = 100;
     BlackFish trackblackFish;
 
-    public static float tankai_power = 2200;
+    public static float tankai_power = 2000;
    
     public float DownScaleTime_NoEatFish = 10;
     float downScaleTimer_NoEatFish = 0;

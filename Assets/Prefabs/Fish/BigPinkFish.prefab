@@ -1209,15 +1209,16 @@ MonoBehaviour:
   moveSpeed: 1
   scaleSize: 8
   scaleCountText: {fileID: 929626833631715355}
-  scaleSizeRange: {x: 6, y: 8}
-  scaleNumRange: {x: 1, y: 2}
+  scaleSizeRange: {x: 8, y: 8}
+  scaleNumRange: {x: 8, y: 8}
   isBig: 1
   blackFishList: []
   pinkFishState: 0
   createRedPoses:
   - {fileID: 2663056032978028291}
+  - {fileID: 2663056032978028291}
   createFishPre: {fileID: 8588265326221012255, guid: 04a2b1f3bdfe6f642b47227fa74d1e85, type: 3}
-  addScaleCount: 1
+  addScaleCount: 3
   DownScaleTime_NoEatFish: 10
   redFishRange: {x: 20, y: 50}
   blackFishPoses:

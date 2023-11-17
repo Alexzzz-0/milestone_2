@@ -273,7 +273,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9d7d5a973b5bce545b3d773f2d452918, type: 2}
+  - {fileID: 2100000, guid: f399946d894cdcd488be7f28bf58211c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -502,7 +502,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -113.35, y: -40.05, z: 89.62}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8148911651178159713}
   - {fileID: 9209851526807335727}
@@ -575,8 +575,8 @@ MonoBehaviour:
   moveSpeed: 1.5
   scaleSize: 2
   scaleCountText: {fileID: 1016198703038085031}
-  scaleSizeRange: {x: 1, y: 2}
-  scaleNumRange: {x: 1, y: 2}
+  scaleSizeRange: {x: 2, y: 3}
+  scaleNumRange: {x: 2, y: 3}
   pinkCreateTF: {fileID: 8704545278596935183}
   createPinkPrefab: {fileID: 361027692642681255, guid: c5e8ec1df3f8e0e46b1ae5646d29e9e3, type: 3}
   blackCreateTF: {fileID: 9209851526807335727}
