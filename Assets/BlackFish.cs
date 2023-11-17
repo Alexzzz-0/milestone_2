@@ -17,7 +17,7 @@ public class BlackFish : FishBase
     public PinkFish createPinkPrefab;
     public void CreatePinkFish()
     {
-        GameController.Instance.CreatePink(pinkCreateTF.position, pinkCreateTF.rotation,(PinkFish pink) => { pink.SetMinScale(); });
+        GameController.Instance.CreatePink(pinkCreateTF.position, pinkCreateTF.rotation, (PinkFish pink) => { pink.SetMinScale(); });
         /*
         var pink = Instantiate(createPinkPrefab);
         pink.transform.SetParent(GameController.Instance.fishParent);
@@ -72,7 +72,7 @@ public class BlackFish : FishBase
         */
         if (other.GetComponent<RedFish>())
         {
-           var fish= other.GetComponent<RedFish>();
+            var fish = other.GetComponent<RedFish>();
             fish.DeleteThis();
             CreatePinkFish();
         }
@@ -97,7 +97,7 @@ public class BlackFish : FishBase
         if (array.Length > 0)
         {
             targetHaiCaoCircle = array[0];
-         
+
         }
     }
     float realRadiu = 0;
@@ -108,7 +108,7 @@ public class BlackFish : FishBase
         {
             case BlackFishState.MoveToHC:
                 {
-                    if (targetHaiCaoCircle==null)
+                    if (targetHaiCaoCircle == null)
                     {
                         FindTargetHaicaoCircle();
                         break;
@@ -128,10 +128,10 @@ public class BlackFish : FishBase
                     {
                         //Debug.Log("Ë²ÒÆ£¿");
                         transform.position = targetPos;
-                      
+
                     }
-                    
-                    if (Vector3.Distance(transform.position, targetPos)<rotateRadiu)
+
+                    if (Vector3.Distance(transform.position, targetPos) < rotateRadiu)
                     {
 
                         realRadiu = Vector3.Distance(transform.position, targetPos);
@@ -142,16 +142,16 @@ public class BlackFish : FishBase
             case BlackFishState.RotateByHaiCao:
                 {
                     float moveDistance = moveSpeedT * Time.deltaTime;
-                    float moveAngle = moveDistance / (realRadiu * 2 * Mathf.PI)*360.0f;
+                    float moveAngle = moveDistance / (realRadiu * 2 * Mathf.PI) * 360.0f;
                     Vector3 haicaoPos = new Vector3(targetHaiCaoCircle.transform.position.x, transform.position.y, targetHaiCaoCircle.transform.position.z);
-                    float curAngle = Vector3.SignedAngle(Vector3.forward, transform.position-haicaoPos, Vector3.up);
+                    float curAngle = Vector3.SignedAngle(Vector3.forward, transform.position - haicaoPos, Vector3.up);
                     float targetAngle = curAngle + moveAngle;
                     Vector3 lastPos = transform.position;
-                    Vector3 targetLocalPos = new Vector3(Mathf.Sin(targetAngle/180*Mathf.PI),0, Mathf.Cos(targetAngle / 180 * Mathf.PI)) *realRadiu;
+                    Vector3 targetLocalPos = new Vector3(Mathf.Sin(targetAngle / 180 * Mathf.PI), 0, Mathf.Cos(targetAngle / 180 * Mathf.PI)) * realRadiu;
                     transform.position = haicaoPos + targetLocalPos;
 
 
-                    float bodyAngle = Vector3.SignedAngle(Vector3.forward, transform.position-lastPos, Vector3.up);
+                    float bodyAngle = Vector3.SignedAngle(Vector3.forward, transform.position - lastPos, Vector3.up);
                     transform.rotation = Quaternion.Euler(0, bodyAngle, 0);
                 }
                 break;
